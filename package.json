@@ -1,0 +1,15 @@
+{
+  "name": "leetcode-js",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:microJ/leetcode-js.git",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+  }
+}
