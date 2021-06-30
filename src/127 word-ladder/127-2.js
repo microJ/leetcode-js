@@ -9,6 +9,10 @@
 // 时间复杂度: 同 127-1
 // 空间复杂度: 同 127-1
 
+// https://leetcode-cn.com/submissions/detail/191107825/
+// 直接修改原数组 wordList 时, 时间缩减40ms
+// 执行用时: 364 ms, 内存消耗: 41.2 MB
+
 /**
  * @param {string} beginWord
  * @param {string} endWord
@@ -21,7 +25,6 @@ export var ladderLength = function (beginWord, endWord, wordList) {
     return 0
   }
 
-  const _wordList = wordList.filter((v) => v !== beginWord)
   const queue = [beginWord]
   let level = 1
   let currentCount = 1
@@ -30,8 +33,13 @@ export var ladderLength = function (beginWord, endWord, wordList) {
   while (queue.length) {
     const value = queue.shift()
 
-    for (var i = _wordList.length - 1; i >= 0; i--) {
-      const word = _wordList[i]
+    for (var i = wordList.length - 1; i >= 0; i--) {
+      const word = wordList[i]
+
+      if (word === beginWord) {
+        wordList.splice(i, 1)
+        continue
+      }
 
       // 找到满足变换条件的单词
       if (fuzzyLike(word, value)) {
@@ -40,7 +48,7 @@ export var ladderLength = function (beginWord, endWord, wordList) {
           return level + 1
         }
 
-        _wordList.splice(i, 1)
+        wordList.splice(i, 1)
         queue.push(word)
         nextCount++
       }
