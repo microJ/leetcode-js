@@ -7,9 +7,10 @@
 // 2. 列队元素存储 level 信息
 // 3. 将当前单词与 wordList 中的单词做【是否相差一个字母】的匹配
 // ============================== 复杂度 ==============================
-// 1. 时间复杂度：O(m * n * q)
+// 1. 时间复杂度：O(m * n * q + n + i)
 // 执行时间：word.length * wordList.length * queue.length
 // 最坏情况下：
+//    endWord 所在位置 i
 //    word.length = m 一般不会很大;
 //    wordList.length = n
 //    queue.length = q 最坏情况下为 n
