@@ -25,7 +25,7 @@
  */
 export var ladderLength = function (beginWord, endWord, wordList) {
   // endword 不存在
-  if (!wordList.some((v) => v === endWord)) {
+  if (wordList.indexOf(endWord) < 0) {
     return 0
   }
 
