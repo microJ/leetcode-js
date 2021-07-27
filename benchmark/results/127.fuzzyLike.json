@@ -1,0 +1,27 @@
+{
+  "name": "127 fuzzyLike",
+  "date": "2021-07-27T08:52:35.172Z",
+  "version": "1.0.0",
+  "results": [
+    {
+      "name": "127-2",
+      "ops": 15488863,
+      "margin": 0.84,
+      "percentSlower": 0
+    },
+    {
+      "name": "127-3",
+      "ops": 14067416,
+      "margin": 2.15,
+      "percentSlower": 9.18
+    }
+  ],
+  "fastest": {
+    "name": "127-2",
+    "index": 0
+  },
+  "slowest": {
+    "name": "127-3",
+    "index": 1
+  }
+}

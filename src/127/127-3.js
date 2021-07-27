@@ -5,6 +5,7 @@
 // ============================== 原理 ==============================
 // BFS
 // 把树的每一层当成一个队列进行处理
+// 优化了 fuzzyLike 函数
 // 比 127-2 时间缩减 8ms
 // ============================== 复杂度 ==============================
 // 时间复杂度: O(i + n * m * l)
@@ -70,10 +71,9 @@ export var ladderLength = function (beginWord, endWord, wordList) {
 export function fuzzyLike(word1, word2) {
   let diffCount = 0
   for (var i = word1.length - 1; i >= 0; i--) {
-    if (word1[i] !== word2[i]) {
-      diffCount++
+    if (word1[i] !== word2[i] && ++diffCount > 1) {
+      return false
     }
-    if (diffCount > 1) return false
   }
   return true
 }

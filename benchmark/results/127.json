@@ -1,0 +1,39 @@
+{
+  "name": "127 word-ladder",
+  "date": "2021-07-27T08:52:24.063Z",
+  "version": "1.0.0",
+  "results": [
+    {
+      "name": "127-1",
+      "ops": 1207925,
+      "margin": 1.65,
+      "percentSlower": 27.93
+    },
+    {
+      "name": "127-2",
+      "ops": 1676069,
+      "margin": 0.53,
+      "percentSlower": 0
+    },
+    {
+      "name": "127-3",
+      "ops": 1439686,
+      "margin": 0.95,
+      "percentSlower": 14.1
+    },
+    {
+      "name": "127-80ms",
+      "ops": 48015,
+      "margin": 0.68,
+      "percentSlower": 97.14
+    }
+  ],
+  "fastest": {
+    "name": "127-2",
+    "index": 1
+  },
+  "slowest": {
+    "name": "127-80ms",
+    "index": 3
+  }
+}
